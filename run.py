@@ -26,7 +26,8 @@ def menu():
     nl_1 = '\n'
     nl_2 = '\n' * 2
     clear_terminal()
-    print(f"{nl_1}{'  Main Menu ! ':*^80}{nl_2}")
+    print('\n' * 4)
+    print(f"{'  Main Menu ! ':*^80}{nl_2}")
     print(f"{' 1: Play Hangman ':^80}{nl_1}")
     print(f"{' 2: View High Scores ':^80}{nl_1}")
     print(f"{' 3: Rules ':^80}{nl_1}")
