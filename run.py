@@ -1,5 +1,4 @@
 import sys
-
 from app.clear_function import clear_terminal
 from app.ascii_art import hangman_ascii_welcome
 from app.ascii_art import hangman_ascii_bye
@@ -58,7 +57,16 @@ def menu():
             hangman_ascii_bye()
             sys.exit()
         else:
+            clear_terminal()
+            print('\n' * 3)
+            print(f"{'  Main Menu ! ':*^80}{nl_2}")
+            print(f"{' 1: Play Hangman ':^80}{nl_1}")
+            print(f"{' 2: View High Scores ':^80}{nl_1}")
+            print(f"{' 3: Rules ':^80}{nl_1}")
+            print(f"{' 4: QUIT ':^80}{nl_2}")
+            print(f"{' Invalid Choice ! ':^80}")
             print(f"{' Must choose 1, 2, 3 or 4 ! ':^80}")
+            print('\n')
 
 
 welcome()
