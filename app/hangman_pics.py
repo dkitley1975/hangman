@@ -86,7 +86,7 @@ def display_hangman(tries):
                                     |
                                     --------
         """,
-            # initial empty state
+        # initial empty state
         """
                                     --------
                                     |

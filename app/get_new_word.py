@@ -1,5 +1,6 @@
 import requests
 
+
 def get_word():
     """
     requests a single random word form the hangman.api
@@ -10,4 +11,3 @@ def get_word():
     response = requests.request("GET", url)
     answer = response.json()
     return answer[0].upper()
-    

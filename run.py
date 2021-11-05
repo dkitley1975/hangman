@@ -10,38 +10,39 @@ from app.play_game import play
 from app.high_scores import display_highscores
 from app.rules import display_rules
 
+
 def welcome():
     """
     Displays the welcome message.
     """
     hangman_ascii_welcome()
 
+
 def menu():
     """
-    Displays the navigation to start a game, view high scores, view rules or quit.
+    Displays the navigation to start a game, view high scores,
+    view rules or quit.
     """
+    nl_1 = '\n'
+    nl_2 = '\n' * 2
     clear_terminal()
-    print('\n' * 3)
-    print(f"{'  Main Menu ! ':*^80}")
-    print('\n' * 2)
-    print(f"{' 1: Play Hangman ':^80}")
-    print('\n' * 1)
-    print(f"{' 2: View High Scores ':^80}")
-    print('\n' * 1)
-    print(f"{' 3: Rules ':^80}")
-    print('\n' * 1)
-    print(f"{' 4: QUIT ':^80}")
-    print('\n' * 2)
+    print(f"{nl_1}{'  Main Menu ! ':*^80}{nl_2}")
+    print(f"{' 1: Play Hangman ':^80}{nl_1}")
+    print(f"{' 2: View High Scores ':^80}{nl_1}")
+    print(f"{' 3: Rules ':^80}{nl_1}")
+    print(f"{' 4: QUIT ':^80}{nl_2}")
     while True:
         player_menu_selection = input(" " * 21 +
-         " Please make a choice (1, 2, 3 or 4): \n" + ' ' * 39)
+                                      "Please make a choice (1, 2, 3 or 4): \n"
+                                      + ' ' * 39)
         if player_menu_selection == '1':
             hangman_ascii_lets_play()
             hangman_ascii_hangman()
             word = get_word()
             play(word)
-            while input(' ' * 20 +
-             "Would you like to play again? (Y/N) \n" + ' ' * 39).upper() == "Y":
+            while input(" " * 20 +
+                        "Would you like to play again? (Y/N) \n" +
+                        " " * 39).upper() == "Y":
                 word = get_word()
                 play(word)
                 clear_terminal()
@@ -57,6 +58,7 @@ def menu():
             sys.exit()
         else:
             print(f"{' Must choose 1, 2, 3 or 4 ! ':^80}")
+
 
 welcome()
 menu()
