@@ -1,6 +1,3 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
 import sys
 
 from app.clear_function import clear_terminal
@@ -40,9 +37,12 @@ def menu():
         if player_menu_selection == '1':
             hangman_ascii_lets_play()
             hangman_ascii_hangman()
-            print("You choose 1")
+            word = get_word()
+            play(word)
             while input(' ' * 20 + "Would you like to play again? (Y/N) ").upper() == "Y":
-                print("You choose 1")
+                word = get_word()
+                play(word)
+                clear_terminal()
             menu()
         elif player_menu_selection == '2':
             display_highscores()
