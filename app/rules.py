@@ -10,8 +10,7 @@ def display_rules():
     # and adjusted to fit
     clear_terminal()
     print("*" * 80)
-    print("""
-             _  _                                  ___       _
+    print("""             _  _                                  ___       _
             | || |__ _ _ _  __ _ _ __  __ _ _ _   | _ \\_   _| |___ ___
             | __ / _` | ' \\/ _` | '  \\/ _` | ' \\  |   / |_| | / -_|_-<
             |_||_\\__,_|_||_\\__, |_|_|_\\__,_|_||_| |_|__\\____|_\\___/__/
@@ -27,8 +26,7 @@ def display_rules():
     solve the word or all the parts are on the gallows.
 
     TO WIN: The executioner wins if the full body is hanging from the gallows.
-    The player wins if they guess the word before the person is hung.
-    """)
+    The player wins if they guess the word before the person is hung.""")
     print("*" * 80)
     print('\n')
     input(" " * 24 + "Press Enter to return to the menu \n" + ' ' * 39)
