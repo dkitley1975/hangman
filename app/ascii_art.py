@@ -220,6 +220,7 @@ def hangman_ascii_congratulations():
                               | |  | | | |(  ___/| ( ) ( ) |
                               (_)  (_) (_) \\____)(_) (_) (_)
     """)
+    print("*" * 80)
     sleep(1)
     clear_terminal()
 
