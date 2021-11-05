@@ -21,7 +21,7 @@ def play(word):
     print(f"{'Hello and welcome to my Hangman Game':^80}")
     print('\n' * 2)
     player_name = input(' ' * 25
-     + "Please enter your name: \n").title()
+     + "Please enter your name: \n" + ' ' * 35).title()
     clear_terminal()
     print('\n' * 2)
     print(f"{'Hello ' + player_name + ' lets play Hangman!':^80}")
@@ -71,6 +71,7 @@ def play(word):
         clear_terminal()
         print(word)
         guessed_letters_string = ",".join(guessed_letters)
+        print('\n' * 4)
         print(f"{'Your previously guesses letters are:':^80}")
         print(f"{guessed_letters_string :^80}")
         print(display_hangman(tries))

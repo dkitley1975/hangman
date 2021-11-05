@@ -32,5 +32,5 @@ def display_rules():
     ********************************************************************************
     """
     )
-    input(" " * 24 + "Press Enter to return to the menu \n")
+    input(" " * 24 + "Press Enter to return to the menu \n"+ ' ' * 39)
     clear_terminal()
