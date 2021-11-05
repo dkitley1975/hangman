@@ -21,7 +21,7 @@ def play(word):
     print(f"{'Hello and welcome to my Hangman Game':^80}")
     print('\n' * 2)
     player_name = input(' ' * 25
-     + "Please enter your name: ").title()
+     + "Please enter your name: \n").title()
     clear_terminal()
     print('\n' * 2)
     print(f"{'Hello ' + player_name + ' lets play Hangman!':^80}")
@@ -33,7 +33,7 @@ def play(word):
     print(f"{'there are ' + str(total_letters) + ' letters in the word':^80}")
     print('\n' * 2)
     while not guessed and tries > 0:
-        guess = input(' ' * 23 + "Please guess a letter or word: ").upper()
+        guess = input(' ' * 23 + "Please guess a letter or word: \n").upper()
         if len(guess) == 1 and guess.isalpha():
             if guess in guessed_letters:
                 print(f"{'You have already guessed ' + guess + ' please try another letter':^80}")

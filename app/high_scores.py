@@ -33,7 +33,7 @@ def display_highscores():
         print (f'{ Score: ^30}{ Name: ^20}{ Word: ^30}')
 
     print('\n')
-    input(' ' * 23 + "Press Enter to return to the menu")
+    input(' ' * 23 + "Press Enter to return to the menu \n")
     clear_terminal()
 
 

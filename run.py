@@ -33,13 +33,13 @@ def menu():
     print(f"{' 4: QUIT ':^80}")
     print('\n' * 2)
     while True:
-        player_menu_selection = input(' ' * 21 + ' Please make a choice (1, 2, 3 or 4): ')
+        player_menu_selection = input(" " * 21 + " Please make a choice (1, 2, 3 or 4): \n")
         if player_menu_selection == '1':
             hangman_ascii_lets_play()
             hangman_ascii_hangman()
             word = get_word()
             play(word)
-            while input(' ' * 20 + "Would you like to play again? (Y/N) ").upper() == "Y":
+            while input(' ' * 20 + "Would you like to play again? (Y/N) \n").upper() == "Y":
                 word = get_word()
                 play(word)
                 clear_terminal()
