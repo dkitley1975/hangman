@@ -19,16 +19,18 @@
     - [High Scores](#high-scores)
     - [The Rules](#the-rules)
     - [Exit](#exit)
-  - [ASCCI ART](#ascci-art)
+  - [ASCII ART](#ascii-art)
   - [Game Flow](#game-flow)
+  - [Modules Used](#modules-used)
+  - [Features Left to Implement](#features-left-to-implement)
   - [Testing and Bugs](#testing-and-bugs)
-    - [Features Left to Implement](#features-left-to-implement)
-    - [Testing](#testing)
-  - [Input Validation](#input-validation)
+    - [Input Validation](#input-validation)
     - [Menu Input Validation](#menu-input-validation)
     - [Game Play Input Validation](#game-play-input-validation)
   - [PEP8](#pep8)
   - [Bugs](#bugs)
+    - [Solved](#solved)
+    - [Remaining](#remaining)
   - [Deployment](#deployment)
   - [Credits](#credits)
   - [Special Thanks](#special-thanks)
@@ -104,9 +106,9 @@
 
   The player can chhoose to exit to the terminal after game play if required.
 
-## ASCCI ART
+## ASCII ART
 
-  I used this site [ASCCI ART](https://patorjk.com) to create the ASCCI art used through out the site, this all needed to be amended to add the additional \'s and re-aligned to fit the terminal alloted space.
+  I used this site [ASCII ART](http://patorjk.com/software/taag) to create the ASCII art used through out the site, this all needed to be amended to add the additional \'s and re-aligned to fit the terminal alloted space.
   This art is used as menu headers for The Rules, Highscores. Commiserations, Congratulations, Welcome and Lets Play Messages.
 
 ## Game Flow
@@ -114,18 +116,23 @@
   ![Game flow and choice input](./docs/screenshots/hangman-flowchart.png)
   I used [Lucid Chart](https://www.lucidchart.com/) to sketch out the flow of the game, as a guide for the coding process.
 
-## Testing and Bugs
+## Modules Used
 
-### Features Left to Implement
+- From the time module sleep is used to pause for the specified duration.
+- Requests module is used for the requestion of the Word from the Hangman Words API.
+- OS module clear is used for the clearing of the Terminal.
+- gspread and google.oauth2.service_account are used for the handling of the Google Sheet and Google Drive Credentials
+
+## Features Left to Implement
 
 - Difficulty Levels. Retrieving only words of a certain length according to the Player selected difficultly level.
 - Increase the gap between the underscores representing the blank word. At present, in some resolutions these underscores can appear to be joined together without any gap.
 
-### Testing
+## Testing and Bugs
 
-  I have manually tested the site in my local terminal and in the Code Institute Heroku terminal.
+I have manually tested the site in my local terminal and in the Code Institute Heroku terminal.
 
-## Input Validation
+### Input Validation
 
 ### Menu Input Validation
 
@@ -143,7 +150,14 @@ If the player inputs an invalid input during game play, the player is advised th
 
 ## Bugs
 
- It was noted during creating the screen shots that the highscores were listed alphabetically by the Player Name rather than the Scores. This bug was added when the highscores were rearranged previously by Score, Player Name, and Guessed Word. This was rearranged with the Score first then Player Name and Guessed Word. The sort command was left sorting by the 2nd column instead of being updated.
+### Solved
+
+- It was noted during creating the screen shots that the highscores were listed alphabetically by the Player Name rather than the Scores. This bug was added when the highscores were rearranged previously by Score, Player Name, and Guessed Word. This was rearranged with the Score first then Player Name and Guessed Word. The sort command was left sorting by the 2nd column instead of being updated.
+- A Bug accured after testing where after the word was solved the game stopped and froze, this was due to a previous typo, whilst refractoring code to only be 79 characters wide to comply with the [PEP8 online validator](http://pep8online.com/).
+
+### Remaining
+
+  No know bugs remaining
 
 ## Deployment
 
@@ -157,9 +171,9 @@ If the player inputs an invalid input during game play, the player is advised th
   4. Create a new [Heroku App](https://id.heroku.com/login/).
   5. Set the buildbacks to Pyhton and NodeJS in that order.
   6. Add Config Var keys  
-    CREDS -  Your Credentials data from Google
-    PORT - 8000
-    KEY - VALUE
+     - CREDS, Your Credentials data from Google
+     - PORT, 8000
+     - KEY, VALUE
   7. Link the Heroku app to repository
   8. Click on Deploy
 
@@ -167,8 +181,9 @@ If the player inputs an invalid input during game play, the player is advised th
 
 - Code Institute for the deployment terminal
 - Google
+- Stackoverflow
 - YouTube videos
-- [ASCCI ART](https://patorjk.com")
+- [ASCII ART](http://patorjk.com/software/taag)
   
 ## Special Thanks
 
