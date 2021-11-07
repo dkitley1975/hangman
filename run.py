@@ -64,9 +64,8 @@ def menu():
             print(f"{' 2: View High Scores ':^80}{nl_1}")
             print(f"{' 3: Rules ':^80}{nl_1}")
             print(f"{' 4: QUIT ':^80}{nl_2}")
-            print(f"{' Invalid Choice ! ':^80}")
-            print(f"{' Must choose 1, 2, 3 or 4 ! ':^80}")
-            print('\n')
+            print('{:^80}'.format("Sorry " + player_menu_selection +
+                                  " is an invalid option"))
 
 
 welcome()
