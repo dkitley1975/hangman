@@ -28,10 +28,10 @@ def display_highscores():
     """
     clear_terminal()
     hangman_ascii_high_scores()
+    Reorder_Sheet.sort((1, 'des'))
     print('\n')
     for Score, Name, Word in Scores[:10]:
         print(f'{ Score: ^30}{ Name: ^20}{ Word: ^30}')
-
     print('\n')
     input(' ' * 23 + "Press Enter to return to the menu \n" + ' ' * 40)
     clear_terminal()
