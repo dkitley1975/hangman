@@ -2,11 +2,10 @@ from time import sleep
 from app.clear_function import clear_terminal
 
 
-# ASCII Art from https://patorjk.com/software/taag/#p=display&f=Puffy&t=Welcome
-# and adjusted to fit
 def hangman_ascii_welcome():
     '''
-    Prints the Welcome message to the screen in ASCII ART
+    Prints the Welcome message to the screen in ASCII ART.
+    ASCII Art from http://patorjk.com/software/taag and adjusted to fit
     '''
     clear_terminal()
     print('\n' * 4)
