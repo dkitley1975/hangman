@@ -42,5 +42,5 @@ def update_highscores(new_score):
     updates the highscores to the spreadsheet.
     """
     Update_Score.append_row(new_score)
-    Reorder_Sheet.sort((2, 'des'))
+    Reorder_Sheet.sort((1, 'des'))
     Delete_Rows.delete_rows(10, 11)
