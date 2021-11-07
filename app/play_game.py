@@ -71,7 +71,7 @@ def play(word):
             print("Not a valid guess.")
         clear_terminal()
         guessed_letters_string = ", ".join(guessed_letters)
-        print(f"{'Your previously guesses letters are:':^80}")
+        print(f"{nl_2}{'Your previously guessed letters are:':^80}")
         print(f"{guessed_letters_string :^80}")
         print(display_hangman(tries))
         print(f'{word_completion:^80}')
