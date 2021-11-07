@@ -12,15 +12,16 @@ from app.rules import display_rules
 
 def welcome():
     """
-    Displays the welcome message.
+    Displays the welcome message
+    in ASSCI Art.
     """
     hangman_ascii_welcome()
 
 
 def menu():
     """
-    Displays the navigation to start a game, view high scores,
-    view rules or quit.
+    Displays the navigation to start a game,
+    view high scores, view rules or quit.
     """
     nl_1 = '\n'
     nl_2 = '\n' * 2
@@ -33,8 +34,8 @@ def menu():
     print(f"{' 4: QUIT ':^80}{nl_2}")
     while True:
         player_menu_selection = input(" " * 21 +
-                                      "Please make a choice (1, 2, 3 or 4): \n"
-                                      + ' ' * 39)
+                                      "Please make a choice (1, 2, 3"
+                                      "or 4): \n" + ' ' * 39)
         if player_menu_selection == '1':
             hangman_ascii_lets_play()
             hangman_ascii_hangman()
