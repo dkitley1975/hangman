@@ -68,7 +68,10 @@ def play(word):
                 guessed = True
                 word_completion = word
         else:
-            print("Not a valid guess.")
+            print('{:^80}'.format("Sorry " + guess +
+                                  " is an invalid guess"
+                                  " Please use the letters a to z"))
+        sleep(2)
         clear_terminal()
         guessed_letters_string = ", ".join(guessed_letters)
         print(f"{nl_2}{'Your previously guessed letters are:':^80}")
